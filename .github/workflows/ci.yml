@@ -35,7 +35,7 @@ jobs:
         id: generator
         run: |
           tmpdir=$(mktemp -d)
-          copier copy -r HEAD --force --trust --skip-tasks
+          copier copy -r HEAD --force --trust --skip-tasks . "$tmpdir"
           echo "output_dir=$tmpdir" >> $GITHUB_OUTPUT
 
       - name: Check generated files
