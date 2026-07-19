@@ -10,5 +10,22 @@
     ],
     "reviewers": [
         "brpaz"
+    ],
+    "github-actions": {
+        "managerFilePatterns": [
+            "/(^|/)\\.github/workflows/[^/]+\\.ya?ml$/"
+        ]
+    },
+    "packageRules": [
+        {
+            "description": "Group and automerge non-major updates",
+            "matchUpdateTypes": [
+                "minor",
+                "patch"
+            ],
+            "groupName": "non-major updates",
+            "automerge": true,
+            "platformAutomerge": true
+        }
     ]
 }
